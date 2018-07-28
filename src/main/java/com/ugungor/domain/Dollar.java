@@ -2,7 +2,7 @@ package com.ugungor.domain;
 
 public class Dollar {
 
-    public Integer amount;
+    private Integer amount;
 
     public Dollar(Integer amount) {
         this.amount = amount;
