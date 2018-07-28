@@ -20,4 +20,11 @@ public class DollarTest {
         assertThat(product.amount, is(15));
 
     }
+
+    @Test
+    public void testEquality() {
+
+        assertThat(new Dollar(5).equals(new Dollar(5)), is(Boolean.TRUE));
+        assertThat(new Dollar(5).equals(new Dollar(6)), is(Boolean.FALSE));
+    }
 }
