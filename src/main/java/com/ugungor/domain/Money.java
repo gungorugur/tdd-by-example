@@ -13,6 +13,6 @@ public class Money {
 
         Money money = (Money) object;
 
-        return this.amount.equals(money.amount);
+        return this.amount.equals(money.amount) && this.getClass().equals(money.getClass());
     }
 }
