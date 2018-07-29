@@ -27,4 +27,11 @@ public class DollarTest {
         assertThat(new Franc(5).equals(new Franc(6)), is(Boolean.FALSE));
         assertThat(new Franc(5).equals(Money.dollar(5)), is(Boolean.FALSE));
     }
+
+    @Test
+    public void testCurrency() {
+
+        assertThat(Money.dollar(1).currency(), is("USD"));
+        assertThat(Money.franc(1).currency(), is("CHF"));
+    }
 }
