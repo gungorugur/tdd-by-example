@@ -1,6 +1,5 @@
 package com.ugungor;
 
-import com.ugungor.domain.Franc;
 import com.ugungor.domain.Money;
 import org.junit.Test;
 
@@ -23,9 +22,9 @@ public class DollarTest {
 
         assertThat(Money.dollar(5).equals(Money.dollar(5)), is(Boolean.TRUE));
         assertThat(Money.dollar(5).equals(Money.dollar(6)), is(Boolean.FALSE));
-        assertThat(new Franc(5).equals(new Franc(5)), is(Boolean.TRUE));
-        assertThat(new Franc(5).equals(new Franc(6)), is(Boolean.FALSE));
-        assertThat(new Franc(5).equals(Money.dollar(5)), is(Boolean.FALSE));
+        assertThat(Money.franc(5).equals(Money.franc(5)), is(Boolean.TRUE));
+        assertThat(Money.franc(5).equals(Money.franc(6)), is(Boolean.FALSE));
+        assertThat(Money.franc(5).equals(Money.dollar(5)), is(Boolean.FALSE));
     }
 
     @Test

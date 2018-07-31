@@ -2,15 +2,15 @@ package com.ugungor.domain;
 
 public class Franc extends Money {
 
-    public Franc(Integer amount) {
+    public Franc(Integer amount, String currency) {
 
         this.amount = amount;
-        this.currency = "CHF";
+        this.currency = currency;
     }
 
     public Money times(Integer multiplier) {
 
-        return new Franc(this.amount * multiplier);
+        return new Franc(this.amount * multiplier, null);
     }
 
     @Override

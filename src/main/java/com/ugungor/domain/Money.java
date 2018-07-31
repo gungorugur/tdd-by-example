@@ -6,11 +6,11 @@ public abstract class Money {
     protected String currency;
 
     public static Money dollar(Integer amount) {
-        return new Dollar(amount);
+        return new Dollar(amount, "USD");
     }
 
     public static Money franc(Integer amount) {
-        return new Franc(amount);
+        return new Franc(amount, "CHF");
     }
 
     public abstract Money times(Integer multiplier);
