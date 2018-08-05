@@ -8,11 +8,11 @@ import static org.junit.Assert.assertThat;
 
 public class MoneyTest {
 
-
     @Test
     public void testMultiplication() {
 
         final Money five = Money.dollar(5);
+
         assertThat(five.times(2), is(Money.dollar(10)));
         assertThat(five.times(3), is(Money.dollar(15)));
     }
@@ -32,5 +32,13 @@ public class MoneyTest {
 
         assertThat(Money.dollar(1).currency(), is("USD"));
         assertThat(Money.franc(1).currency(), is("CHF"));
+    }
+
+    @Test
+    public void testSimpleAddition() {
+
+        final Money sum = Money.dollar(10).plus(Money.dollar(5));
+
+        assertThat(sum, is(Money.dollar(15)));
     }
 }

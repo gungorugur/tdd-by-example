@@ -39,4 +39,9 @@ public class Money {
 
         return this.amount.equals(money.amount) && this.currency.equals(money.currency);
     }
+
+    public Money plus(Money addend) {
+
+        return new Money(this.amount + addend.amount, this.currency);
+    }
 }
